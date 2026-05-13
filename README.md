@@ -6,8 +6,8 @@ while 10>0:
     print("5 - elevado")
     print("6 - porcentagem")
     print("7 - raiz")
-    print("8 - equasão do 1 grau")
-    print("9 - equasão do 2 grau")
+    print("8 - equação do 1 grau")
+    print("9 - equação do 2 grau")
     escolha=input("escolha uma opção")
     if escolha == "1":
        h=int(input("qualquer numero"))
@@ -35,8 +35,8 @@ while 10>0:
        print(p**q)
        input()
     if escolha == "6":
-       valor = float(input("Digite o valor: "))
-       porcentagem = float(input("Digite a porcentagem: "))
+       valor = float(input("Digite o valor:"))
+       porcentagem = float(input("Digite a porcentagem:"))
        resultado = (valor * porcentagem) / 100
        print(resultado)
        input()
@@ -45,13 +45,17 @@ while 10>0:
        v=u ** 0.5
        print(v)
        input()
+    if escolha == "8":
+        pq=input("digite o a")
+        uy=input("digite o b")
+        
     if escolha == "9":
-       a = input("Digite o valor de a"))
-       b = input("Digite o valor de b"))
-       c = input("Digite o valor de c"))
+       a = float(input("Digite o valor de a"))
+       b = float(input("Digite o valor de b"))
+       c = float(input("Digite o valor de c"))
        delta = (b ** 2) - (4 * a * c)
-    if delta < 0:
-       print("delta n pode ser 0 ou negativo)")
+    if delta == 0:
+       print("delta n pode ser 0")
     else:
        x1 = (-b + (delta ** 0.5)) / (2 * a)
        x2 = (-b - (delta ** 0.5)) / (2 * a)
@@ -62,4 +66,4 @@ while 10>0:
        print(x1)
        print("x2")
        print(x2)
-       
+       input()
