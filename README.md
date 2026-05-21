@@ -46,24 +46,25 @@ while 10>0:
        print(v)
        input()
     if escolha == "8":
-        pq=input("digite o a")
-        uy=input("digite o b")
+        pq=int(input("digite o ax"))
+        uy=int(input("digite o b"))
+        print(pq-uy== 0)
         
     if escolha == "9":
-       a = float(input("Digite o valor de a"))
-       b = float(input("Digite o valor de b"))
-       c = float(input("Digite o valor de c"))
-       delta = (b ** 2) - (4 * a * c)
-    if delta == 0:
-       print("delta n pode ser 0")
-    else:
-       x1 = (-b + (delta ** 0.5)) / (2 * a)
-       x2 = (-b - (delta ** 0.5)) / (2 * a)
-
-       print("O valor de Delta e:")
-       print(delta)
-       print("x1")
-       print(x1)
-       print("x2")
-       print(x2)
-       input()
+        a = float(input("Digite o valor de a"))
+        b = float(input("Digite o valor de b"))
+        c = float(input("Digite o valor de c"))
+        delta = (b ** 2) - (4 * a * c)
+        if delta == 0:
+           print("delta n pode ser 0")
+        else:
+            x1 = (-b + (delta ** 0.5)) / (2 * a)
+            x2 = (-b - (delta ** 0.5)) / (2 * a)
+    
+            print("O valor de Delta e:")
+            print(delta)
+            print("x1")
+            print(x1)
+            print("x2")
+            print(x2)
+            input()
