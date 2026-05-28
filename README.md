@@ -1,3 +1,4 @@
+import random
 while 10>0:
     print("1 - adição")
     print("2 - subtração")
@@ -8,6 +9,7 @@ while 10>0:
     print("7 - raiz")
     print("8 - equação do 1 grau")
     print("9 - equação do 2 grau")
+    print("10 - estudos")
     escolha=input("escolha uma opção")
     if escolha == "1":
        h=int(input("qualquer numero"))
@@ -35,8 +37,8 @@ while 10>0:
        print(p**q)
        input()
     if escolha == "6":
-       valor = float(input("Digite o valor:"))
-       porcentagem = float(input("Digite a porcentagem:"))
+       valor = float(input("Digite o valor"))
+       porcentagem = float(input("Digite a porcentagem"))
        resultado = (valor * porcentagem) / 100
        print(resultado)
        input()
@@ -48,7 +50,8 @@ while 10>0:
     if escolha == "8":
         pq=int(input("digite o ax"))
         uy=int(input("digite o b"))
-        print(pq-uy== 0)
+        ok=int(input("digite o c"))
+        print(pq-uy/ok+uy)
         
     if escolha == "9":
         a = float(input("Digite o valor de a"))
@@ -68,3 +71,10 @@ while 10>0:
             print("x2")
             print(x2)
             input()
+    if escolha == "10":
+             ow=random.randint(0,100000000000000000000000000000000)
+             ço=random.randint(0,100000000000000000000000000000000)
+             operaçãoaleatoria=random.randint(1,8)
+             print(operaçãoaleatoria)
+             
+            
