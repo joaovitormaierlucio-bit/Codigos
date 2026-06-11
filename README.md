@@ -7,53 +7,53 @@ while 10>0:
     print("5 - elevado")
     print("6 - porcentagem")
     print("7 - raiz")
-    print("8 - equação do 1 grau")
-    print("9 - equação do 2 grau")
-    print("10 - estudos")
+    print("8 - equação do 2 grau")
+    print("9 - estudos")
     escolha=input("escolha uma opção")
     if escolha == "1":
        h=int(input("qualquer numero"))
        i=int(input("2 qualquer numero"))
+       print()
        print(h+i)
        input()
     if escolha == "2":
        j=int(input("qualquer numero"))
        k=int(input("2 qualquer numero"))
+       print()
        print(j-k)
        input()
     if escolha == "3":
        l=int(input("qualquer numero"))
        m=int(input("2 qualquer numero"))
+       print()
        print(l*m)
        input()
     if escolha == "4":
        n=int(input("qualquer numero"))
        o=int(input("2 qualquer numero"))
+       print()
        print(n/o)
        input()
     if escolha == "5":
        p=int(input("qualquer numero"))
        q=int(input("2 qualquer numero"))
+       print()
        print(p**q)
        input()
     if escolha == "6":
        valor = float(input("Digite o valor"))
        porcentagem = float(input("Digite a porcentagem"))
        resultado = (valor * porcentagem) / 100
+       print()
        print(resultado)
        input()
     if escolha == "7":
        u=float(input("Digite o número: "))
        v=u ** 0.5
+       print()
        print(v)
        input()
     if escolha == "8":
-        pq=int(input("digite o ax"))
-        uy=int(input("digite o b"))
-        ok=int(input("digite o c"))
-        print(pq-uy/ok+uy)
-        
-    if escolha == "9":
         a = float(input("Digite o valor de a"))
         b = float(input("Digite o valor de b"))
         c = float(input("Digite o valor de c"))
@@ -63,18 +63,24 @@ while 10>0:
         else:
             x1 = (-b + (delta ** 0.5)) / (2 * a)
             x2 = (-b - (delta ** 0.5)) / (2 * a)
-    
+            print()
             print("O valor de Delta e:")
             print(delta)
+            print()
             print("x1")
             print(x1)
+            print()
             print("x2")
             print(x2)
             input()
-    if escolha == "10":
-             ow=random.randint(0,100000000000000000000000000000000)
-             ço=random.randint(0,100000000000000000000000000000000)
-             operaçãoaleatoria=random.randint(1,8)
-             print(operaçãoaleatoria)
+    if escolha == "9":
+                conta=random.randint(1,1)
+                ow=random.randint(0,100000000000000000000000000000000)
+                ço=random.randint(0,100000000000000000000000000000000)
+                operaçãoaleatoria=random.randint(1,8)
+                if conta == 1:
+                    print(str(ow) + " + " + str(ço))
+                   pl=(str(ow) + " + " + str(ço))
+                   bw=input("Qual a resposta")
              
             
