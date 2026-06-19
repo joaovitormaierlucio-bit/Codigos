@@ -8,3 +8,4 @@ while 10>0:
      print("raiz")
      escolha=input("digite uma opção")
      if escolha == 1:
+          print("teste")
