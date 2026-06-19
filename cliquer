@@ -1,0 +1,10 @@
+let contador = 0
+let n = document.getelementbyid("")
+function a (){
+    contador+= 1
+    n.textcontent = contador
+}
+if contador == 100{
+    contador+= 2
+}
+
