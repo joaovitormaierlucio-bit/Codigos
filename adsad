@@ -1,0 +1,23 @@
+let contador = 0
+let moeda = 0
+let contidade d moedas nivel 1 == 10
+let contidade d moedas nivel 2 == 20
+let limite = 10;
+function botaoclique(){
+        contador+= 1
+        if contador >= limite{
+            moeda += 1
+            limite += 10
+        }
+        }
+        
+function botaoupar1(){
+    if moeda >= contidade d moedas nivel 1{
+        contador += 2
+        contidade d moedas nivel 1 += 10
+    }
+    }
+    function botãoupar2{
+        if moeda == contidade d moedas nivel 2 
+    contador += 2
+    }
