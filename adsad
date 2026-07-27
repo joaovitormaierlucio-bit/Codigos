@@ -1,10 +1,15 @@
+
 let contador = 0
 let moeda = 0
 let contidade d moedas nivel 1 == 10
 let contidade d moedas nivel 2 == 20
+let contidade d moedas nivel 3 == 30
+let contidade d moedas nivel 4 == 40
 let limite = 10;
+let forca_clique = 1;
 function botaoclique(){
-        contador+= 1
+        clique += 1
+        contador += forca_clique
         if contador >= limite{
             moeda += 1
             limite += 10
@@ -13,11 +18,26 @@ function botaoclique(){
         
 function botaoupar1(){
     if moeda >= contidade d moedas nivel 1{
-        contador += 2
+        moeda -= 0 
+     
         contidade d moedas nivel 1 += 10
     }
     }
     function botãoupar2{
         if moeda == contidade d moedas nivel 2 
-    contador += 2
+        forca_clique =+ 2 
+    clique += 4
+    moeda -= 0 
     }
+    function botãoupar3{
+        forca_clique =+ 4
+        if moeda == contidade d moedas nivel 3
+    clique += 4
+    moeda -= 0 
+    }
+    function botãoupar4{
+        forca_clique =+ 6
+        if moeda == contidade d moedas nivel 4
+    moeda = 0 
+    }
+
