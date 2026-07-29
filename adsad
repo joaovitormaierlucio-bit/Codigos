@@ -1,10 +1,10 @@
-
 let contador = 0
 let moeda = 0
 let contidade d moedas nivel 1 == 10
 let contidade d moedas nivel 2 == 20
 let contidade d moedas nivel 3 == 30
 let contidade d moedas nivel 4 == 40
+let contidade d moedas nivel 5 == 50
 let limite = 10;
 let forca_clique = 1;
 function botaoclique(){
@@ -40,4 +40,10 @@ function botaoupar1(){
         if moeda == contidade d moedas nivel 4
     moeda = 0 
     }
+    function botãoupar5{
+        forca_clique =+ 8
+        if moeda == contidade d moedas nivel 5
+    moeda = 0 
+    }
+    
 
