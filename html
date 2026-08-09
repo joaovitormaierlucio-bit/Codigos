@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stilesheet" hret="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>game clicker online</title>
-    <link rel="stylesheet" href="gasdvjad.css">
 </head>
+
 <body>
-    <p> 
-    <script src="dfs.js"></script>
+    
     <h1>
         game clicker
     </h1>
-    <img class="imagem" rc="moeda.png" alt="">
+
+    <img class="imagem" src="moeda.png" alt="">
 
     <div>
-    <button onclick="botaoclique()" class="botao_clique">
-        clique aqui
-    </button>
+        <button onclick="botaoclique()" class="botao_clique">
+            clique aqui
+        </button>
+
+        <p id="contador">0</p>
     </div>
     
     <div id="botoes" class="botoes">
-        <button onclick="botaoUpar1()">
+
+        <button class="botao1" onclick="botaoupar1()">
             upar +1
-        </button >
-        <button onclick="botaoUpar2()">
+        </button>
+
+        <button class="botao2" onclick="botaoupar2()">
             upar +2
         </button>
-        <button onclick="botaoUpar5()">
+
+        <button class="botao3" onclick="botaoupar5()">
             upar +5
         </button>
-        <button onclick="botaoUpar10()">
+
+        <button class="botao4" onclick="botaoupar10()">
             upar +10
-          </button>
-      </div>
-	</body>
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
 </html>
