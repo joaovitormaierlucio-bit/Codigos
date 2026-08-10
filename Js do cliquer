@@ -13,6 +13,7 @@ function botaoclique() {
     contador += forca_clique;
 
     document.getElementById("contador").textContent = contador;
+    document.getElementById("moeda").textContent = moeda;
 
     if (contador >= limite) {
         moeda += 1;
@@ -24,6 +25,7 @@ function botaoupar1() {
     if (moeda >= qdm_nivel_1) {
         moeda -= qdm_nivel_1;
         qdm_nivel_1 += 10;
+        forca_clique += 1;
     }
 }
 
