@@ -42,6 +42,8 @@ function botaoupar1() {
         moeda -= qdm_nivel_1;
         qdm_nivel_1 += 10;
         forca_clique += 1;
+    else;
+        alert("dinheiro insuficiente")
     }
 }
 
@@ -49,6 +51,8 @@ function botaoupar2() {
     if (moeda >= qdm_nivel_2) {
         moeda -= qdm_nivel_2;
         forca_clique += 2;
+else;
+        alert("dinheiro insuficiente")
     }
 }
 
@@ -56,6 +60,8 @@ function botaoupar5() {
     if (moeda >= qdm_nivel_3) {
         moeda -= qdm_nivel_3;
         forca_clique += 5;
+else;
+        alert("dinheiro insuficiente")
     }
 }
 
@@ -63,6 +69,8 @@ function botaoupar10() {
     if (moeda >= qdm_nivel_4) {
         moeda -= qdm_nivel_4;
         forca_clique += 10;
+else;
+        alert("dinheiro insuficiente")
     }
 }
 function m1ps() {
@@ -74,6 +82,8 @@ function m1ps() {
         setInterval(function() {
             contador += 1;
             document.getElementById("contador").textContent = contador;
-        }, 1000);
+        else;
+        alert("dinheiro insuficiente")
+}, 1000);
     }
 }
