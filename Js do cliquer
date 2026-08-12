@@ -1,5 +1,5 @@
-        let contador = 0;
-let moeda = 1000;
+let contador = 0;
+let moeda = 0;
 let qdm_nivel_alto = 100;
 let qdm_nivel_1 = 10;
 let qdm_nivel_2 = 20;
