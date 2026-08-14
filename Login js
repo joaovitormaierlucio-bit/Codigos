@@ -1,0 +1,17 @@
+function entrar() {
+
+    let usuario = document.getElementById("usuario").value;
+    let senha = document.getElementById("senha").value;
+
+    if (usuario == "admin" && senha == "1234") {
+
+        alert("Login realizado!");
+
+        window.location.href = "index.html";
+
+    } else {
+
+        document.getElementById("mensagem").textContent =
+            "Usuário ou senha incorretos";
+    }
+}
