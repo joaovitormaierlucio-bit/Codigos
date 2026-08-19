@@ -1,90 +1,185 @@
-let contador = 0;
-let moeda = 0;
-let qdm_nivel_alto = 100;
-let qdm_nivel_1 = 7;
-let qdm_nivel_2 = 25;
-let qdm_nivel_3 = 65;
-let qdm_nivel_4 = 90;
+let contador = Number(localStorage.getItem("contador")) || 0;
+let moeda = Number(localStorage.getItem("moeda")) || 0;
 
-let limite = 10;
-let forca_clique = 1;
+let qdm_nivel_alto = Number(localStorage.getItem("qdm_nivel_alto")) || 100;
+let qdm_nivel_1 = Number(localStorage.getItem("qdm_nivel_1")) || 7;
+let qdm_nivel_2 = Number(localStorage.getItem("qdm_nivel_2")) || 25;
+let qdm_nivel_3 = Number(localStorage.getItem("qdm_nivel_3")) || 65;
+let qdm_nivel_4 = Number(localStorage.getItem("qdm_nivel_4")) || 90;
+
+let limite = Number(localStorage.getItem("limite")) || 10;
+let forca_clique = Number(localStorage.getItem("forca_clique")) || 1;
 
 let loja3 = 0;
 
+
+// SALVAR PROGRESSO
+function salvarProgresso() {
+
+    localStorage.setItem("contador", contador);
+    localStorage.setItem("moeda", moeda);
+
+    localStorage.setItem("qdm_nivel_alto", qdm_nivel_alto);
+    localStorage.setItem("qdm_nivel_1", qdm_nivel_1);
+    localStorage.setItem("qdm_nivel_2", qdm_nivel_2);
+    localStorage.setItem("qdm_nivel_3", qdm_nivel_3);
+    localStorage.setItem("qdm_nivel_4", qdm_nivel_4);
+
+    localStorage.setItem("limite", limite);
+    localStorage.setItem("forca_clique", forca_clique);
+}
+
+
+// MOSTRAR O PROGRESSO SALVO
+document.getElementById("contador").textContent = contador;
+document.getElementById("moeda").textContent = moeda;
+
+
 function loja1() {
+
     let loja2 = document.getElementById("texto");
 
     if (loja3 == 0) {
+
         loja3 = 1;
         loja2.style.display = "block";
+
     } else {
+
         loja3 = 0;
         loja2.style.display = "none";
+
     }
 }
+
+
 function botaoclique() {
+
     contador += forca_clique;
 
-    document.getElementById("contador").textContent = contador;
-
     if (contador >= limite) {
+
         moeda += 1;
         limite += 10;
+
     }
+
+    document.getElementById("contador").textContent = contador;
     document.getElementById("moeda").textContent = moeda;
+
+    salvarProgresso();
 }
+
+
 function botaoupar1() {
+
     if (moeda >= qdm_nivel_1) {
+
         moeda -= qdm_nivel_1;
         qdm_nivel_1 += 10;
         forca_clique += 1;
+
         document.getElementById("moeda").textContent = moeda;
+
+        salvarProgresso();
+
     } else {
+
         alert("dinheiro insuficiente");
+
     }
 }
+
+
 function botaoupar2() {
+
     if (moeda >= qdm_nivel_2) {
+
         moeda -= qdm_nivel_2;
         forca_clique += 2;
+
         document.getElementById("moeda").textContent = moeda;
+
+        salvarProgresso();
+
     } else {
+
         alert("dinheiro insuficiente");
+
     }
 }
+
+
 function botaoupar5() {
+
     if (moeda >= qdm_nivel_3) {
+
         moeda -= qdm_nivel_3;
         forca_clique += 5;
+
         document.getElementById("moeda").textContent = moeda;
+
+        salvarProgresso();
+
     } else {
+
         alert("dinheiro insuficiente");
+
     }
 }
+
+
 function botaoupar10() {
+
     if (moeda >= qdm_nivel_4) {
+
         moeda -= qdm_nivel_4;
         forca_clique += 10;
 
         document.getElementById("moeda").textContent = moeda;
+
+        salvarProgresso();
+
     } else {
+
         alert("dinheiro insuficiente");
+
     }
 }
+
+
 function m1ps() {
+
     if (moeda >= qdm_nivel_alto) {
+
         moeda -= qdm_nivel_alto;
+
         document.getElementById("moeda").textContent = moeda;
+
+        salvarProgresso();
+
         setInterval(function() {
+
             contador += 1;
+
             document.getElementById("contador").textContent = contador;
+
             if (contador >= limite) {
+
                 moeda += 1;
                 limite += 10;
+
                 document.getElementById("moeda").textContent = moeda;
+
             }
+
+            salvarProgresso();
+
         }, 1000);
+
     } else {
+
         alert("dinheiro insuficiente");
+
     }
 }
