@@ -1,0 +1,16 @@
+vida = 100
+poção = 2
+def batalha():
+  import random
+  p = random.randint(1, 10)
+  if p == 1:
+  print("um picachu apareceu")
+  a = int(input(o que vc vai fazer"))
+  print("atacar")
+  print("2 - defender"))
+  print("3 - usar poção"))
+  if a == 1
+  if a == 2
+  if a == 3
+  poção - 1
+  vida + 25
