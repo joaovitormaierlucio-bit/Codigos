@@ -1,0 +1,130 @@
+import random
+
+def tentar_capturar(vida_atual_monstro):
+    chance_base = 30
+    if vida_atual_monstro <= 20:
+        chance_base = 80
+    elif vida_atual_monstro <= 40:
+        chance_base = 55
+        
+    numero_sorteado = random.randint(1, 100)
+    
+    if numero_sorteado <= chance_base:
+        return True
+    else:
+        return False
+
+pokemons_selvagens = [
+    "Mewtwo Sombrio", "Gengar", "Dragonite", "Gyarados", "Rayquaza", 
+    "Lucario", "Tyranitar", "Snorlax", "Lugis", "Blastoise", "Venusaur",
+    "Eevee", "Machamp", "Alakazam", "Arcanine", "Lapras", "Scizor"
+]
+pokemon_selvagem = random.choice(pokemons_selvagens)
+
+print("--- BEM-VINDO À JORNADA POKÉMON ---")
+treinador = input("Digite o nome do Treinador: ")
+
+print("\nEscolha seu Pokémon inicial:")
+print("1 — Pikachu")
+print("2 — Charizard")
+print("3 — Mewtwo")
+pokemon_escolhido = input("Digite o número do seu Pokémon: ")
+
+if pokemon_escolhido == "2":
+    meu_pokemon = "Charizard"
+elif pokemon_escolhido == "3":
+    meu_pokemon = "Mewtwo"
+else:
+    meu_pokemon = "Pikachu"
+
+print(f"\nUm Pokémon selvagem apareceu! É um {pokemon_selvagem}!")
+print(f"Vai, {meu_pokemon}!")
+
+vida_jogador = 100
+vida_monstro = 80
+pocoes = 2
+pokebolas = 1
+defendendo = False
+capturado = False
+
+while vida_jogador > 0 and vida_monstro > 0 and not capturado:
+    print(f"\n========================================")
+    print(f"{meu_pokemon} ({treinador}): {vida_jogador}/100 HP | Super Poções: {pocoes} | Pokébolas: {pokebolas}")
+    print(f"{pokemon_selvagem} selvagem: {vida_monstro}/80 HP")
+    print(f"========================================")
+    
+    print("Escolha o comando:")
+    print("1 — Usar Ataque")
+    print("2 — Usar evasiva (Defender)")
+    print("3 — Usar Super Poção")
+    print("4 — Lançar Pokébola")
+    
+    opcao = input("O que fazer? ")
+    acao_valida = False
+    
+    if opcao == "1":
+        dano_jogador = random.randint(10, 20)
+        vida_monstro -= dano_jogador
+        print(f"\n⚡ {meu_pokemon} usou um ataque e causou {dano_jogador} de dano!")
+        acao_valida = True
+        
+    elif opcao == "2":
+        defendendo = True
+        print(f"\n🛡️ {meu_pokemon} está em posição defensiva para o próximo turno!")
+        acao_valida = True
+        
+    elif opcao == "3":
+        if pocoes > 0:
+            if vida_jogador >= 100:
+                print("\n❌ A vida do seu Pokémon já está cheia!")
+            else:
+                vida_jogador += 25
+                if vida_jogador > 100:
+                    vida_jogador = 100
+                pocoes -= 1
+                print(f"\n🧪 Você usou uma Super Poção! {meu_pokemon} recuperou 25 de HP!")
+                acao_valida = True
+        else:
+            print("\n❌ Você não tem mais Super Poções na mochila!")
+            
+    elif opcao == "4":
+        if pokebolas > 0:
+            pokebolas -= 1
+            print(f"\n🔴 Você lançou a Pokébola em direção ao {pokemon_selvagem}...")
+            print("*...balança...*")
+            print("*...balança...*")
+            
+            if tentar_capturar(vida_monstro):
+                capturado = True
+                print(f"💥 Gotcha! O {pokemon_selvagem} foi capturado!")
+            else:
+                print(f"❌ Oh não! O {pokemon_selvagem} escapou da Pokébola!")
+                acao_valida = True
+        else:
+            print("\n❌ Você não tem mais Pokébolas!")
+            
+    else:
+        print("\n⚠️ Comando inválido! Escolha 1, 2, 3 ou 4.")
+
+    if acao_valida and vida_monstro > 0 and not capturado:
+        dano_monstro = random.randint(8, 15)
+        
+        if defendendo:
+            dano_monstro = dano_monstro // 2
+            defendendo = False
+            
+        vida_jogador -= dano_monstro
+        print(f"👹 {pokemon_selvagem} atacou e causou {dano_monstro} de dano em {meu_pokemon}!")
+
+print("\n========================================")
+print("FIM DA BATALHA!")
+print("========================================")
+
+if capturado:
+    print(f"🎉 Incrível! Você completou sua missão capturando o {pokemon_selvagem}!")
+elif vida_jogador <= 0 and vida_monstro <= 0:
+    print("Inacreditável! Ambos os Pokémon desmaiaram ao mesmo tempo! É um empate!")
+elif vida_jogador > 0:
+    print(f"🎉 Vitória! O {pokemon_selvagem} desmaiou! Parabéns Treinador {treinador}, você venceu!")
+else:
+    print(f"💀 Oh não! {meu_pokemon} desmaiou... Você correu para o Centro Pokémon mais próximo.")
